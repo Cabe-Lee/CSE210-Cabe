@@ -1,0 +1,5 @@
+100
+simple:bob,moe,10, 
+eternal:boe,moe,10
+checklist:bom,mob,10,100,2,2
+eternal:negative eternal,nega,-30

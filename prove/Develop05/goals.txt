@@ -1,0 +1,10 @@
+8
+simple:bob,moe,10, 
+eternal:boe,moe,10
+checklist:bom,mob,10,100,2,1
+simple:test,td,23, 
+eternal:mop,pom,32
+checklist:bop,pob,40,1000,2,2
+simple:negative simple,nega simp,-10,X
+eternal:negtive eternal,nega etern,-12
+checklist:negetive checklist,nega check,-30,-1000,2,2

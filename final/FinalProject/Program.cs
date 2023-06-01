@@ -4,42 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        int valid = 1;
-        while (valid == 1)
-        {
-            Console.WriteLine("Flavor Text");
-            Console.WriteLine("Fork Road Flavor Text");
-            Console.WriteLine("Which option do you choose?");
-            Console.WriteLine("     1. Left");
-            Console.WriteLine("     2. Middle");
-            Console.WriteLine("     3. Right");
-            Console.WriteLine("     4. Quit");
-            
+        Graham graham = new Graham();
+        Location currentLocation = new Location();
 
-            //      //
-            int path = Console.Read();
-            if (path == 1)
-            {
-                
-            }
-            if (path == 2)
-            {
-                
-            }
-            if (path == 3)
-            {
-                
-            }
-            if (path == 4)
-            {
-                Console.Clear();
-                Console.WriteLine("Thanks for playing the game. Goodbye.");
-                valid = 0;
-            }
-            else
-            {
-                Console.WriteLine("Please type a number. Ex. 1 - 4");
-            }
+        graham._location = "ForkRoad";
+        currentLocation = new ForkRoad();
+
+        graham._exit = 0;
+        Console.Clear();
+        Console.WriteLine("You, sir Graham, are tasked on a quest by the king to retrieve the magic mirror. Once you succeed the quest, as the king's dying wish, you get to be king of the kingdom. You set on the quest. A King's Quest.");
+        while (graham._exit == 0)
+        {
+            currentLocation = graham.Action(currentLocation);
         }
     }
 }

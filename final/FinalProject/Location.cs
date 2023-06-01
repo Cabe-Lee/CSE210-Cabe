@@ -2,62 +2,38 @@ using System;
 
 public class Location
 {
-    public string _location;
-    
+    public string _name;
+    public string _description;
+    public Dictionary<int, List<string>> _options { get; set; }
+    public int _action;
+    public string _nextLocation;
+    public string _deathMessage;
 
-    //      //
     public Location()
     {
 
     }
 
-
-    //      //
-    public void LocationOpitions()
+    public void DisplayLocation()
+    {
+        Console.WriteLine($"{_name}: {_description}");
+    }
+    public virtual void ChangeLocation()
     {
 
     }
-    public void OptionName()
-    {
-
-    }
-    public void OptionDesciption()
+    public virtual void PickUpItem(string item)
     {
         
     }
-    public void OptionAction()
+    public string UseItem(Items item)
     {
-
-    }
-    public void OptionReplace()
-    {
-        
-    }
-    public void RemoveOption()
-    {
-
-    }
-
-
-    //      //
-    public void Events()
-    {
-        
-    }
-    public void Death()
-    {
-
-    }
-    public void UsedPath()
-    {
-
-    }
-    public void WinCheck()
-    {
-
-    }
-    public void Win()
-    {
-
+        string action = "UseItem";
+        _nextLocation = item.Trigger(_name);
+        if (_name != _nextLocation)
+        {
+            action = "ChangeLocation";
+        }
+        return action;
     }
 }
